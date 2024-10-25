@@ -21,10 +21,12 @@ header {
 }
 
 .navbar-brand {
-    color: #ffffff; /* Cambiado a blanco */
+    color: #ffffff;
     font-size: 2rem;
     text-decoration: none;
     transition: transform 0.3s;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-brand:hover {
@@ -135,6 +137,14 @@ footer {
 
 footer span {
     color: #ffffff;
+}
+
+/* Estilos para las imágenes redondeadas */
+.team-photos {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Permite que las imágenes se distribuyan en múltiples filas */
 }
 
 * {
@@ -283,17 +293,32 @@ footer span {
     color: #ffffff;
 }
 
-/* Estilos para las imágenes redondeadas */
-.team-photos {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-  
 .team-photo {
-    width: 100px; /* Ajusta el tamaño según tus necesidades */
-    height: 100px; /* Ajusta el tamaño según tus necesidades */
-    border-radius: 50%; /* Hace que las imágenes sean redondeadas */
-    margin: 0 10px; /* Espacio entre las imágenes */
-    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+    width: 100px; /* Tamaño de la imagen */
+    height: 100px; /* Tamaño de la imagen */
+    border-radius: 50%; /* Bordes redondeados */
+    margin: 0 10px; /* Espacio entre imágenes */
+    object-fit: cover; /* Ajusta la imagen */
+}
+
+@media (max-width: 600px) {
+    .team-photo {
+        width: 80px; /* Tamaño más pequeño en pantallas pequeñas */
+        height: 80px; /* Tamaño más pequeño en pantallas pequeñas */
+    }
+
+    .giant-sign {
+        font-size: 1.2rem; /* Tamaño de fuente más pequeño */
+    }
+}
+
+@media (max-width: 400px) {
+    .team-photo {
+        width: 60px; /* Tamaño aún más pequeño en pantallas muy pequeñas */
+        height: 60px; /* Tamaño aún más pequeño en pantallas muy pequeñas */
+    }
+
+    .giant-sign {
+        font-size: 1rem; /* Tamaño de fuente más pequeño */
+    }
 }
